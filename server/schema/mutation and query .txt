@@ -1,0 +1,36 @@
+//muatation are used to add the data into the database 
+muatation{
+    //too add
+    addBook(name: "Book name", genre: "Fiction", authorId: 1)
+    // too display
+    name
+    genre
+}
+
+// mutation to add a book and get the added book data
+mutation {
+  addBook(name: "Hello World", genre: "Programming", authorId: "5e1a0d2edcfb2515d422e52a"){
+   name
+    genre
+    author{
+      name
+      books
+      {
+        name
+        id
+      }
+    }
+	  }
+}
+
+// query
+{
+    book{
+        name
+        genre
+        author{
+            name
+            age
+        }
+    }
+}
