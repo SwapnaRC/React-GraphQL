@@ -10,7 +10,7 @@ const app= express();
 //allow cross-origin requests
 app.use(cors());
 
-mongoose.connect('mongodb+srv://graphql-db:swapna55@cluster0-sdktk.mongodb.net/test');
+mongoose.connect('mongodb+srv://graphql-db:<password>@cluster0-sdktk.mongodb.net/test');
 mongoose.connection.once('open', ()=>{
 console.log('connected to DB');
 });
